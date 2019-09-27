@@ -95,22 +95,43 @@ if(isset($_SESSION['success'])){
                         
                         <div class="form-group">
                           <label for="Investments">Investments</label>
-               <input type="number" class="form-control" id="Investments" name="investments" placeholder="0 NGN">
+                            <input type="number" class="form-control" id="Investments" name="asset[]" placeholder="0 NGN">
                         </div>
                         <div class="form-group">
                             <label for="Cash">Cash</label>
-                            <input type="number" class="form-control" id="Cash" name="cash" placeholder="0 NGN">
+                            <input type="number" class="form-control" id="Cash" name="asset[]" placeholder="0 NGN">
                         </div>
                         <div class="form-group">
                             <label for="Bank Account">Bank Account</label>
-                            <input type="number" class="form-control" id="Bank Account" name="bank_account" placeholder="0 NGN">
+                            <input type="number" class="form-control" id="Bank Account" name="asset[]" placeholder="0 NGN">
                         </div>  
                         <div class="form-group">
                             <label for="Real Estate">Real Estate</label>
-                            <input type="number" class="form-control" id="Real Estate" name="real_estate" placeholder="0 NGN">
+                            <input type="number" class="form-control" id="Real Estate" name="asset[]" placeholder="0 NGN">
+                        </div>
+                        <!-- Button trigger modal -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Add New Asset</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="form-control" id="new-asset" placeholder="Enter Asset Title">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="add-asset">Add Asset</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        
+                        <span class="add-form-element" data-toggle="modal" data-target="#modal">Add new field <i class="fas fa-plus" style="color: #6D1AD8"></i></span>
                       <!-- </form> -->
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-3" style="padding:25px;">
@@ -118,28 +139,50 @@ if(isset($_SESSION['success'])){
                         <h1 class="form-caption" style="font-size:1.7rem !important;">Liabilties</h1>
                         <div class="form-group">
                             <label for="Loans">Loans</label>
-                            <input type="number" class="form-control " id="Loans" name="loans" placeholder="0 NGN">
+                            <input type="number" class="form-control " id="Loans" name="liability[]" placeholder="0 NGN">
                         </div>
                         <div class="form-group">
                             <label for="Mortgages">Mortgages</label>
-                            <input type="number" class="form-control" id="Mortgages" name="mortgages" placeholder="0 NGN">
+                            <input type="number" class="form-control" id="Mortgages" name="liability[]" placeholder="0 NGN">
                         </div>
                         <div class="form-group">
                             <label for="Utility bills">Utility bills</label>
-                            <input type="number" class="form-control" id="Utility bills" name="utility_bills" placeholder="0 NGN">
+                            <input type="number" class="form-control" id="Utility bills" name="liability[]" placeholder="0 NGN">
                         </div>
                         <div class="form-group">
                             <label for="Other debts">Other debts</label>
-                            <input type="number" class="form-control" id="Other debts" name="other_debts" placeholder="0 NGN">
+                            <input type="number" class="form-control" id="Other debts" name="liability[]" placeholder="0 NGN">
                         </div>
+                        
                         <div>
                             <button type="submit" class="get-started" name="get_networth"> Get Net Worth</button>
                         </div>
+                        
 
                         
                         
                     </form>
-                    
+                    <div class="modal fade" id="modal-liability" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Add New Liability</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="form-control" id="new-liability" placeholder="Enter Liability Title">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary" id="add-liability">Add Liability</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <span class="add-form-element" data-toggle="modal" data-target="#modal-liability">Add new field <i class="fas fa-plus" style="color: #6D1AD8"></i></span>
+
                 </div>
                 
             </div>
@@ -148,5 +191,6 @@ if(isset($_SESSION['success'])){
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="Js/dashboard.js"></script>
 </body>
 </html>
