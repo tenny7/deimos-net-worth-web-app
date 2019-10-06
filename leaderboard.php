@@ -80,7 +80,7 @@ if(isset($_SESSION['username'])){
             <div class="row" style="margin-top:50px;">
             <div class="main_pad col-xs-12 col-sm-12 col-md-5 col-lg-7 offset-md-3 offset-lg-3">
             <h1 class="main__caption mt-1 mb-3">Richest People in Deimos </h1>
-                <div class="table-responsive">
+                <div class="table-responsive" style="margin-bottom:50px;">
                     <table class="table table-hover table-bordered">
                         <thead>
                             
